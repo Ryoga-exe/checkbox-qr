@@ -6,32 +6,17 @@ html {
   font-family: system-ui, sans-serif;
   background-color: #f6f6f6;
 }
-code {
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
-    monospace;
+
+fieldset {
+  border: none;
+  margin: 0.5rem 0;
 }
 
-.checkbox-wrap {
-  display: flex;
-  justify-content: center;
+legend {
+  font-size: 0.85rem;
+  color: #444;
 }
 
-.checkbox {
-  display: block;
-  margin: 0;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 100px 4vw;
-  max-width: 1120px;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin: 0;
-}
 #input-text-label {
   font-size: 0.85rem;
   color: #444;
@@ -43,13 +28,6 @@ h1 {
   border: 1px solid rgba(var(--accent), 25%);
   padding: 1rem;
   margin: 0.4rem 0;
-}
-.text-gradient {
-  background-image: var(--accent-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 400%;
-  background-position: 0%;
 }
 .instructions {
   line-height: 1.6;

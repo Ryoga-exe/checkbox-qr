@@ -1,6 +1,20 @@
-import qrcode from "qrcode-generator";
-import type { ErrorCorrectionLevel } from "src/types/global";
 import { useEffect, useState } from "react";
+import qrcode from "qrcode-generator";
+import styled from "styled-components";
+import type { ErrorCorrectionLevel } from "src/types/global";
+
+const QRWrapper = styled.section`
+  padding: 3rem 0;
+`;
+
+const CheckboxWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  > input {
+    display: block;
+    margin: 0;
+  }
+`;
 
 interface QRCodeDrawerProps {
   text: string;
@@ -30,7 +44,7 @@ function QRCodeDrawer({ text, errorCorrectionLevel }: QRCodeDrawerProps) {
   }, [text, errorCorrectionLevel]);
 
   return (
-    <div>
+    <QRWrapper>
       {(function () {
         const res = [];
         for (let i = 0; i < matrix.length; i++) {
@@ -39,22 +53,17 @@ function QRCodeDrawer({ text, errorCorrectionLevel }: QRCodeDrawerProps) {
             wrapper.push(
               <input
                 type="checkbox"
-                className="checkbox"
                 onChange={() => handleCheckboxChenge(i, j)}
                 checked={matrix[i][j]}
                 key={`qr-${i}-${j}`}
               />
             );
           }
-          res.push(
-            <div className="checkbox-wrap" key={`wrap-${i}`}>
-              {wrapper}
-            </div>
-          );
+          res.push(<CheckboxWrapper key={`wrap-${i}`}>{wrapper}</CheckboxWrapper>);
         }
-        return <div>{res}</div>;
+        return <>{res}</>;
       })()}
-    </div>
+    </QRWrapper>
   );
 }
 
