@@ -1,8 +1,24 @@
 {
   "name": "checkbox-qr",
   "private": true,
+  "description": "QRCode with check box",
   "version": "1.0.0",
+  "author": "Ryoga-exe <49950206+Ryoga-exe@users.noreply.github.com>",
+  "license": "MIT",
   "type": "module",
+  "keywords": [
+    "qrcode",
+    "checkbox",
+    "react",
+    "vite"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ryoga-exe/checkbox-qr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ryoga-exe/checkbox-qr/issues"
+  },
   "scripts": {
     "dev": "vite",
     "start": "vite",
