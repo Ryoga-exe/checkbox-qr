@@ -8,7 +8,7 @@ import "src/styles/global.css";
 const Header = styled.header`
   display: flex;
   padding: 0 0 0.25rem 0;
-  margin: 4.5rem 0 1.4rem 0;
+  margin: 4.2rem 0 1.4rem 0;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(var(--accent), 25%);
@@ -149,6 +149,17 @@ function App() {
         </Container>
         <QRCodeDrawer text={text} errorCorrectionLevel={errorCorrection} />
       </main>
+      <footer>
+        <Container>
+          <ul>
+            <li>
+              <span>The word "QR Code" is registered trademark of DENSO WAVE INCORPORATED</span>
+              <br />
+              <a href="http://www.denso-wave.com/qrcode/faqpatent-e.html">http://www.denso-wave.com/qrcode/faqpatent-e.html</a>
+            </li>
+          </ul>
+        </Container>
+      </footer>
     </>
   );
 }

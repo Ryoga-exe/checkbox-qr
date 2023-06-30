@@ -8,6 +8,19 @@ html {
   background-color: #f6f6f6;
 }
 
+body, #root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: 1.7rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
 fieldset {
   border: none;
   margin: 0.5rem 0;
