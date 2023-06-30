@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import QRCodeDrawer from "./components/QRCodeDrawer";
-import "./styles/App.css";
-import { ErrorCorrectionLevel } from "./types/global";
+import QRCodeDrawer from "src/components/QRCodeDrawer";
+import "src/styles/App.css";
+import { ErrorCorrectionLevel } from "src/types/global";
 
 function App() {
   const [text, setText] = useState("ここにテキストを入力");

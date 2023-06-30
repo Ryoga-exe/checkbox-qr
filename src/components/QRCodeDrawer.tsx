@@ -1,5 +1,5 @@
 import qrcode from "qrcode-generator";
-import type { ErrorCorrectionLevel } from "../types/global";
+import type { ErrorCorrectionLevel } from "src/types/global";
 import { useEffect, useState } from "react";
 
 interface QRCodeDrawerProps {
