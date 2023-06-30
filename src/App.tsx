@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import QRCodeDrawer from "src/components/QRCodeDrawer";
 import { ErrorCorrectionLevel } from "src/types/global";
-import "src/styles/App.css";
+import "src/styles/global.css";
 
 const H1 = styled.h1`
   font-size: 3rem;
@@ -10,6 +10,9 @@ const H1 = styled.h1`
   margin: 4.5rem 0 1rem 0;
   > span.text-gradient {
     background-image: var(--accent-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
   }
@@ -19,6 +22,19 @@ const Container = styled.section`
   margin: 0 auto;
   padding: 0 4vw;
   max-width: 1120px;
+`;
+
+const Textarea = styled.textarea`
+  width: 100%;
+  background-color: white;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(var(--accent), 25%);
+  padding: 1rem;
+  margin: 0.4rem 0;
+  +label {
+    font-size: 0.85rem;
+    color: #444;
+  }
 `;
 
 const InlineRadio = styled.div`
@@ -53,13 +69,13 @@ const InlineRadio = styled.div`
     justify-content: center;
     pointer-events: none;
     border-right: 1px solid rgba(var(--accent), 25%);
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   div:last-child label {
     border-right: 0;
   }
   input:checked + label {
-    background-image: linear-gradient(45deg, #5536df, #d81b60 90%);
+    background: #d81b70;
     font-weight: 500;
     color: #ffffff;
   }
@@ -85,12 +101,12 @@ function App() {
           <label htmlFor="input-text" id="input-text-label">
             テキスト
           </label>
-          <textarea
+          <Textarea
             placeholder="ここにテキストを入力"
             rows={3}
             name="input-text"
             id="input-text"
-            onChange={(event) => setText(event.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => setText(event.target.value)}
           />
           <fieldset>
             <legend>誤り訂正レベル</legend>

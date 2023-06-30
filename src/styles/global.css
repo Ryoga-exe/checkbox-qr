@@ -1,0 +1,19 @@
+:root {
+  --accent: 34, 120, 237;
+  --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #5536df 30%, white 60%);
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  background-color: #f6f6f6;
+}
+
+fieldset {
+  border: none;
+  margin: 0.5rem 0;
+}
+
+legend, label {
+  font-size: 0.85rem;
+  color: #444;
+}
