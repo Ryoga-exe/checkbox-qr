@@ -1,13 +1,26 @@
 import React, { useState } from "react";
+import { MarkGithubIcon } from '@primer/octicons-react'
 import styled from "styled-components";
 import QRCodeDrawer from "src/components/QRCodeDrawer";
 import { ErrorCorrectionLevel } from "src/types/global";
 import "src/styles/global.css";
 
+const Header = styled.header`
+  display: flex;
+  padding: 0 0 0.25rem 0;
+  margin: 4.5rem 0 1.4rem 0;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(var(--accent), 25%);
+  > a {
+    display: block;
+    color: black;
+  }
+`;
+
 const H1 = styled.h1`
   font-size: 3rem;
   font-weight: 800;
-  margin: 4.5rem 0 1rem 0;
   > span.text-gradient {
     background-image: var(--accent-gradient);
     background-clip: text;
@@ -95,9 +108,14 @@ function App() {
     <>
       <main>
         <Container>
-          <H1>
-            <span className="text-gradient">Checkbox</span> QR
-          </H1>
+          <Header>
+            <H1>
+              <span className="text-gradient">Checkbox</span> QR
+            </H1>
+            <a href="https://github.com/Ryoga-exe/checkbox-qr">
+              <MarkGithubIcon verticalAlign="text-bottom" size={40} />
+            </a>
+          </Header>
           <label htmlFor="input-text" id="input-text-label">
             テキスト
           </label>
