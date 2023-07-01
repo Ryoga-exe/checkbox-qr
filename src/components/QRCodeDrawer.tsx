@@ -13,10 +13,6 @@ const CheckboxWrapper = styled.div`
     input {
     display: block;
     margin: 0;
-    @media screen and (max-width: 576px) {
-      width: 12px;
-      height: 12px;
-    }
   }
 `;
 
