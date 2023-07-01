@@ -3,6 +3,8 @@ import qrcode from "qrcode-generator";
 import styled from "styled-components";
 import type { ErrorCorrectionLevel } from "src/types/global";
 
+qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
+
 const QRWrapper = styled.section`
   padding: 3rem 0;
 `;
@@ -30,7 +32,6 @@ function QRCodeDrawer({ text, errorCorrectionLevel }: QRCodeDrawerProps) {
     setMatrix(newMatrix);
   };
   useEffect(() => {
-    qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
     const qr = qrcode(0, errorCorrectionLevel);
     qr.addData(text);
     qr.make();
