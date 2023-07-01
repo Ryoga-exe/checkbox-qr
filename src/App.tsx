@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MarkGithubIcon } from '@primer/octicons-react'
+import { MarkGithubIcon } from "@primer/octicons-react";
 import styled from "styled-components";
 import QRCodeDrawer from "src/components/QRCodeDrawer";
 import { ErrorCorrectionLevel } from "src/types/global";
@@ -16,7 +16,7 @@ const Header = styled.header`
     display: block;
     color: black;
     > svg {
-      height: 2.8rem
+      height: 2.8rem;
     }
   }
 `;
@@ -47,7 +47,7 @@ const Textarea = styled.textarea`
   border: 1px solid var(--primary-light);
   padding: 1rem;
   margin: 0.4rem 0;
-  +label {
+  + label {
     font-size: 0.85rem;
     color: #444;
   }
@@ -158,7 +158,9 @@ function App() {
             <li>
               <span>The word "QR Code" is registered trademark of DENSO WAVE INCORPORATED</span>
               <br />
-              <a href="http://www.denso-wave.com/qrcode/faqpatent-e.html">http://www.denso-wave.com/qrcode/faqpatent-e.html</a>
+              <a href="http://www.denso-wave.com/qrcode/faqpatent-e.html">
+                http://www.denso-wave.com/qrcode/faqpatent-e.html
+              </a>
             </li>
           </ul>
         </Container>

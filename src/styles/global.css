@@ -19,7 +19,8 @@ html {
   background-color: var(--primary-background);
 }
 
-body, #root {
+body,
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -35,7 +36,7 @@ footer {
 }
 
 li {
-  list-style:none
+  list-style: none;
 }
 
 fieldset {
@@ -43,7 +44,8 @@ fieldset {
   margin: 0.5rem 0;
 }
 
-legend, label {
+legend,
+label {
   font-size: 0.85rem;
   color: #444;
 }

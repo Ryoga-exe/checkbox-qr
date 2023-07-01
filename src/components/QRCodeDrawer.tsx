@@ -3,7 +3,7 @@ import qrcode from "qrcode-generator";
 import styled from "styled-components";
 import type { ErrorCorrectionLevel } from "src/types/global";
 
-qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
+qrcode.stringToBytes = qrcode.stringToBytesFuncs["UTF-8"];
 
 const QRWrapper = styled.section`
   padding: 3rem 0;
@@ -12,7 +12,7 @@ const QRWrapper = styled.section`
 const CheckboxWrapper = styled.div`
   display: flex;
   justify-content: center;
-    input {
+  input {
     display: block;
     margin: 0;
   }
