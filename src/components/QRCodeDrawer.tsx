@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import qrcode from "qrcode-generator";
 import styled from "styled-components";
 import type { ErrorCorrectionLevel } from "src/types/global";
@@ -23,6 +23,7 @@ interface QRCodeDrawerProps {
 
 function QRCodeDrawer({ text, errorCorrectionLevel }: QRCodeDrawerProps) {
   const [matrix, setMatrix] = useState<boolean[][]>([[true]]);
+  const wrapperRef = useRef(null);
   const handleCheckboxChenge = (i: number, j: number) => {
     const newMatrix = [...matrix];
     newMatrix[i][j] = !newMatrix[i][j];
@@ -44,7 +45,7 @@ function QRCodeDrawer({ text, errorCorrectionLevel }: QRCodeDrawerProps) {
   }, [text, errorCorrectionLevel]);
 
   return (
-    <QRWrapper>
+    <QRWrapper ref={wrapperRef}>
       {(function () {
         const res = [];
         for (let i = 0; i < matrix.length; i++) {
