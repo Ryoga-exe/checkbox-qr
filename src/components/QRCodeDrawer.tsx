@@ -10,11 +10,13 @@ const QRWrapper = styled.section`
 const CheckboxWrapper = styled.div`
   display: flex;
   justify-content: center;
-  > input {
+    input {
     display: block;
     margin: 0;
-    width: 1rem;
-    height: 1rem;
+    @media screen and (max-width: 576px) {
+      width: 12px;
+      height: 12px;
+    }
   }
 `;
 
