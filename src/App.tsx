@@ -11,10 +11,13 @@ const Header = styled.header`
   margin: 4.2rem 0 1.4rem 0;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(var(--accent), 25%);
+  border-bottom: 1px solid var(--primary-light);
   > a {
     display: block;
     color: black;
+    > svg {
+      height: 2.8rem
+    }
   }
 `;
 
@@ -22,7 +25,7 @@ const H1 = styled.h1`
   font-size: 3rem;
   font-weight: 800;
   > span.text-gradient {
-    background-image: var(--accent-gradient);
+    background-image: var(--primary-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -41,7 +44,7 @@ const Textarea = styled.textarea`
   width: 100%;
   background-color: white;
   border-radius: 0.4rem;
-  border: 1px solid rgba(var(--accent), 25%);
+  border: 1px solid var(--primary-light);
   padding: 1rem;
   margin: 0.4rem 0;
   +label {
@@ -54,11 +57,11 @@ const InlineRadio = styled.div`
   display: flex;
   background-color: white;
   border-radius: 0.4rem;
-  border: 1px solid rgba(var(--accent), 25%);
+  border: 1px solid var(--primary-light);
   overflow: hidden;
   margin: 0.4rem 0;
   div {
-    height: 45px;
+    height: 2.8rem;
     position: relative;
     flex: 1;
   }
@@ -74,23 +77,23 @@ const InlineRadio = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    color: #b6b6b6;
+    color: var(--secondary-text);
     display: flex;
-    background-color: #ffffff;
+    background-color: white;
     background-image: none;
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    border-right: 1px solid rgba(var(--accent), 25%);
+    border-right: 1px solid var(--primary-light);
     font-size: 1.05rem;
   }
   div:last-child label {
     border-right: 0;
   }
   input:checked + label {
-    background: #d81b70;
+    background: var(--accent);
     font-weight: 500;
-    color: #ffffff;
+    color: white;
   }
 `;
 

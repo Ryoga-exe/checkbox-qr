@@ -13,6 +13,8 @@ const CheckboxWrapper = styled.div`
   > input {
     display: block;
     margin: 0;
+    width: 1rem;
+    height: 1rem;
   }
 `;
 

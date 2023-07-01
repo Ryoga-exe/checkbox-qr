@@ -1,11 +1,22 @@
 :root {
-  --accent: 34, 120, 237;
-  --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #5536df 30%, white 60%);
+  --primary: 34, 120, 237;
+  --primary-gradient: linear-gradient(45deg, rgb(var(--primary)), #5536df 30%, white 60%);
+  --primary-light: rgba(var(--primary), 25%);
+  --primary-background: #f6f6f6;
+  --primary-text: #212121;
+  --secondary-text: #b6b6b6;
+  --accent: #d81b70;
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    font-size: 12px;
+  }
 }
 
 html {
   font-family: system-ui, sans-serif;
-  background-color: #f6f6f6;
+  background-color: var(--primary-background);
 }
 
 body, #root {
@@ -18,9 +29,13 @@ body, #root {
 
 footer {
   margin-top: auto;
-  margin-bottom: 1.7rem;
+  padding: 1.7rem 0;
   color: #555;
   font-size: 0.9rem;
+}
+
+li {
+  list-style:none
 }
 
 fieldset {
