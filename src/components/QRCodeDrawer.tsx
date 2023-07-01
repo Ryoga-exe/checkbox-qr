@@ -30,6 +30,7 @@ function QRCodeDrawer({ text, errorCorrectionLevel }: QRCodeDrawerProps) {
     setMatrix(newMatrix);
   };
   useEffect(() => {
+    qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
     const qr = qrcode(0, errorCorrectionLevel);
     qr.addData(text);
     qr.make();
